@@ -1,38 +1,40 @@
-.App {
-  text-align: center;
+*,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.confirm-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row-reverse;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.confirm-list-product-info {
+  width: 50vw;
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  overflow: hidden;
 }
 
-.App-link {
-  color: #61dafb;
+.confirm-list-product {
+  width: 52vw;
+  height: 102vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: scroll;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.produit-container {
+  width: 30vw;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
 }
