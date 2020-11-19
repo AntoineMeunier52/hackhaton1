@@ -10,7 +10,7 @@ function MainPage() {
   const [alcoolFamily3, setFamilyAlcool3] = useState([]);
 
   const Header = styled.div`
-    height: 500px;
+    height: 600px;
     width: 100%;
     background-color: lightblue;
   `;
@@ -42,15 +42,16 @@ function MainPage() {
       <Link to={"/Family/Elvio"} alcoolList={alcoolFamily1}>
         <div>
           <div>Photo 2</div>
-          <text>fAMILY 2</text>
+          <text>FAMILY 2</text>
         </div>
       </Link>
       <Link to={"/Family/Alfonso"} alcoolList={alcoolFamily1}>
         <div>
           <div>Photo 3</div>
-          <text>fAMILY 3</text>
+          <text>FAMILY 3</text>
         </div>
       </Link>
+      <Link to={"/shopping"}> PANIER </Link>
     </>
   );
 }

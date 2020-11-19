@@ -4,6 +4,8 @@ import NavBarTab from "./NavBarTab";
 import AlcoolList from "./AlcoolList";
 import styled from "styled-components";
 import picture1 from "../components/assets/prohibition_family_1.jpg";
+import picture2 from "../components/assets/Prohibition_pic2.jpg";
+import picture3 from "../components/assets/picture-3.jpg";
 
 function AlcoolFamilyPage({
   alcoolList,
@@ -21,13 +23,13 @@ function AlcoolFamilyPage({
         setPictureFamily(picture1);
         break;
       case "Elvio":
-        setPictureFamily(name);
+        setPictureFamily(picture2);
         break;
       case "Alfonso":
-        setPictureFamily(name);
+        setPictureFamily(picture3);
         break;
       default:
-        return "xoxo";
+        return "No Famiglia";
     }
   };
 

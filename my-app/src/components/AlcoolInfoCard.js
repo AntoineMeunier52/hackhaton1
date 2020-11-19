@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import bottle from "./assets/bottle.JPG";
+import bottle from "./assets/bottlePeaky.png";
 import axios from "axios";
 import CardAlcool from "./CardAlcool";
 
