@@ -2,8 +2,9 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import bottle from "./assets/bottle.JPG";
 import axios from "axios";
+import CardAlcool from "./CardAlcool";
 
-function AlcoolInfoCard({ alcool }) {
+function AlcoolInfoCard({ alcool, handleShoppingAdd, handleShoppingRemove }) {
   const [getPic, setGetPic] = useState([]);
 
   const getPicures = () => {
@@ -37,7 +38,6 @@ function AlcoolInfoCard({ alcool }) {
     background-color: lightgreen;
     border: 5px solid black;
   `;
-
   const AlcoolImg = styled.div`
     background-image: url(${alcool.list_img_url
       ? alcool.list_img_url
@@ -59,6 +59,20 @@ function AlcoolInfoCard({ alcool }) {
       <AlcoolContent>
         <p>{alcool.title}</p>
         <p>Price : {alcool.price} $</p>
+        <button
+          onClick={() => {
+            handleShoppingAdd(alcool);
+          }}
+        >
+          Add
+        </button>
+        <button
+          onClick={() => {
+            handleShoppingRemove(alcool);
+          }}
+        >
+          Remove
+        </button>
       </AlcoolContent>
     </AlcoolCard>
   );

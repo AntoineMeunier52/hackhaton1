@@ -5,7 +5,11 @@ import AlcoolList from "./AlcoolList";
 import styled from "styled-components";
 import picture1 from "../components/assets/prohibition_family_1.jpg";
 
-function AlcoolFamilyPage({ alcoolList }) {
+function AlcoolFamilyPage({
+  alcoolList,
+  handleShoppingAdd,
+  handleShoppingRemove,
+}) {
   console.log(alcoolList);
 
   const { name } = useParams();
@@ -60,7 +64,11 @@ function AlcoolFamilyPage({ alcoolList }) {
       <Link to="/">
         <div>Back</div>
       </Link>
-      <AlcoolList alcoolList={alcoolList} />
+      <AlcoolList
+        alcoolList={alcoolList}
+        handleShoppingAdd={handleShoppingAdd}
+        handleShoppingRemove={handleShoppingRemove}
+      />
     </FamilyPage>
   );
 }

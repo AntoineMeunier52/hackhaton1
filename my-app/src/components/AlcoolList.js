@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import AlcoolInfoCard from "./AlcoolInfoCard";
 import styled from "styled-components";
 
-function AlcoolList({ alcoolList }) {
+function AlcoolList({ alcoolList, handleShoppingAdd, handleShoppingRemove }) {
   console.log(alcoolList);
 
   const [isLoaded, setIsLoaded] = useState(false);
@@ -22,11 +22,18 @@ function AlcoolList({ alcoolList }) {
   return (
     <>
       {isLoaded ? (
-        <Wrapper>
-          {alcoolList.map((alcool, index) => (
-            <AlcoolInfoCard alcool={alcool} key={index} />
-          ))}
-        </Wrapper>
+        <>
+          <Wrapper>
+            {alcoolList.map((alcool, index) => (
+              <AlcoolInfoCard
+                alcool={alcool}
+                key={index}
+                handleShoppingAdd={handleShoppingAdd}
+                handleShoppingRemove={handleShoppingRemove}
+              />
+            ))}
+          </Wrapper>
+        </>
       ) : (
         "Loading"
       )}

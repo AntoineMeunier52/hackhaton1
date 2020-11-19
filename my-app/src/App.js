@@ -9,6 +9,7 @@ function App() {
   const [alcoolFamily1, setFamilyAlcool1] = useState([]);
   const [alcoolFamily2, setFamilyAlcool2] = useState([]);
   const [alcoolFamily3, setFamilyAlcool3] = useState([]);
+  const [shoppingCart, setShoppintCart] = useState([]);
 
   const getAlcool1 = () => {
     axios
@@ -26,6 +27,20 @@ function App() {
     getAlcool1();
   }, []);
 
+  const handleShoppingAdd = (alcool) => {
+    console.log("New product", alcool);
+    setShoppintCart((prevState) => [...prevState, alcool]);
+  };
+
+  const handleShoppingRemove = (alcool) => {
+    console.log("Remove product", alcool);
+    setShoppintCart((prevState) => {
+      if (prevState.includes(alcool)) {
+        return prevState.filter((product) => product !== alcool);
+      }
+    });
+  };
+
   return (
     <Router>
       <Switch>
@@ -34,9 +49,16 @@ function App() {
           exact
           path="/family/:name"
           render={(props) => (
-            <AlcoolFamilyPage {...props} alcoolList={alcoolFamily1} />
+            <AlcoolFamilyPage
+              {...props}
+              alcoolList={alcoolFamily1}
+              handleShoppingAdd={handleShoppingAdd}
+              handleShoppingRemove={handleShoppingRemove}
+            />
           )}
         />
+        <Route />
+        <Route />
       </Switch>
     </Router>
   );
