@@ -17,19 +17,21 @@ function ConfirmPage({ wisky, status }) {
     <div className="confirm-container">
       <div className="confirm-list-product-info">
         <div className="confirm-list-product">
-          {wisky.map((item) => {
-            return (
-              <ConfirmProduit
-                key={item.id}
-                productImage={item.img_url}
-                name={item.title}
-                price={item.price}
-              />
-            );
-          })}
+          <div className="confirm-list">
+            {wisky.map((item) => {
+              return (
+                <ConfirmProduit
+                  key={item.id}
+                  productImage={item.img_url}
+                  name={item.title}
+                  price={item.price}
+                />
+              );
+            })}
+          </div>
           <div className="confirm-info-price">
             <div className="confirm-shipping-price">
-              <p>shipping</p>
+              <p className="confirm-shipping">shipping</p>
               <p>a tobacco packet to the delivery man</p>
             </div>
             <div className="confirm-total-price">
@@ -40,49 +42,68 @@ function ConfirmPage({ wisky, status }) {
         </div>
       </div>
       <div className="confirm-container-info-shipping">
-        <p>please pay by cash when you are delivry </p>
-        <div>
-          <form>
+        <div className="separete-ligne"></div>
+        <p className="confirm-message">
+          please pay by cash when you are delivry{" "}
+        </p>
+        <form className="confirm-form">
+          <div className="confirm-radio-form">
+            <input
+              type="radio"
+              name="place"
+              id="myPlace"
+              defaultChecked
+              onChange={() => {
+                setCheck(false);
+                console.log(check);
+              }}
+              className="confirm-radio"
+            />
+            <label htmlFor="myPlace" className="confirm-radio-text">
+              shipping on my place
+            </label>
+          </div>
+          <div>
+            <input
+              type="radio"
+              name="place"
+              id="other"
+              onChange={() => {
+                setCheck(true);
+                console.log(check);
+              }}
+              className="confirm-radio"
+            />
+            <label htmlFor="other" className="confirm-radio-text">
+              select an other place
+            </label>
+          </div>
+          {check && (
             <div>
-              <input
-                type="radio"
-                name="place"
-                id="myPlace"
-                defaultChecked
-                onChange={() => {
-                  setCheck(false);
-                  console.log(check);
-                }}
-              />
-              <label htmlFor="myPlace">shipping on my place</label>
-            </div>
-            <div>
-              <input
-                type="radio"
-                name="place"
-                id="other"
-                onChange={() => {
-                  setCheck(true);
-                  console.log(check);
-                }}
-              />
-              <label htmlFor="other">select an other place</label>
-            </div>
-            {check && (
               <div>
-                <div>
-                  <input type="text" defaultValue="" placeholder="addres" />
-                </div>
-                <div>
-                  <input type="text" defaultValue="" placeholder="appart" />
-                </div>
+                <input
+                  type="text"
+                  defaultValue=""
+                  placeholder="addres"
+                  className="confirm-input-text"
+                />
               </div>
-            )}
-            <div>
-              <button type="submit">confirm my adress</button>
+              <div>
+                <input
+                  type="text"
+                  defaultValue=""
+                  placeholder="*appart"
+                  className="confirm-input-text"
+                />
+              </div>
             </div>
-          </form>
-        </div>
+          )}
+          <div>
+            <button type="submit" className="confirm-button">
+              confirm my adress
+            </button>
+          </div>
+        </form>
       </div>
     </div>
   );
