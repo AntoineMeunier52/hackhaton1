@@ -16,6 +16,9 @@ function App() {
       .then((res) => {
         console.log(res);
         setFamilyAlcool1(res.data.results);
+      })
+      .catch((error) => {
+        console.log(error);
       });
   };
 

@@ -17,7 +17,8 @@ function MainPage() {
 
   const getAlcool1 = () => {
     axios
-      .get("https://evening-citadel-85778.herokuapp.com:443/whiskey/")
+      // .get("https://evening-citadel-85778.herokuapp.com:443/whiskey/")
+      .get("https://evening-citadel-85778.herokuapp.com/whiskey/?page=2")
       .then((res) => {
         console.log(res);
         setFamilyAlcool1(res.data.results);
@@ -32,19 +33,19 @@ function MainPage() {
     <>
       <NavBarTab />
       <Header>MainPage header</Header>
-      <Link to={"/Family/:name"} alcoolList={alcoolFamily1}>
+      <Link to={"/Family/Yaniso"} alcoolList={alcoolFamily1}>
         <div>
           <div>Photo 1</div>
           <text>FAMILY 1</text>
         </div>
       </Link>
-      <Link to={"/Family/:name"} alcoolList={alcoolFamily1}>
+      <Link to={"/Family/Elvio"} alcoolList={alcoolFamily1}>
         <div>
           <div>Photo 2</div>
           <text>fAMILY 2</text>
         </div>
       </Link>
-      <Link to={"/Family/:name"} alcoolList={alcoolFamily1}>
+      <Link to={"/Family/Alfonso"} alcoolList={alcoolFamily1}>
         <div>
           <div>Photo 3</div>
           <text>fAMILY 3</text>
