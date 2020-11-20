@@ -2,18 +2,15 @@ import { Link } from "react-router-dom";
 import NavBarTab from "./NavBarTab";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import styled from "styled-components";
+import Header from "./Header";
+import FamilySection from "./FamilySection";
 
 function MainPage() {
   const [alcoolFamily1, setFamilyAlcool1] = useState([]);
   const [alcoolFamily2, setFamilyAlcool2] = useState([]);
   const [alcoolFamily3, setFamilyAlcool3] = useState([]);
 
-  const Header = styled.div`
-    height: 500px;
-    width: 100%;
-    background-color: lightblue;
-  `;
+
 
   const getAlcool1 = () => {
     axios
@@ -32,20 +29,18 @@ function MainPage() {
   return (
     <>
       <NavBarTab />
-      <Header>MainPage header</Header>
-      <Link to={"/Family/Yaniso"} alcoolList={alcoolFamily1}>
+      <Header></Header>
+      <Link to={"/Family/Gambino"} alcoolList={alcoolFamily1}>
+      <FamilySection name={"Gambino"} urlx ={'https://upload.wikimedia.org/wikipedia/commons/6/62/Carlo_Gambino.jpg'} >
+
+      </FamilySection>
+      </Link>
+      <Link to={"/Family/Lucchese"} alcoolList={alcoolFamily1}>
         <div>
-          <div>Photo 1</div>
-          <text>FAMILY 1</text>
+          
         </div>
       </Link>
-      <Link to={"/Family/Elvio"} alcoolList={alcoolFamily1}>
-        <div>
-          <div>Photo 2</div>
-          <text>fAMILY 2</text>
-        </div>
-      </Link>
-      <Link to={"/Family/Alfonso"} alcoolList={alcoolFamily1}>
+      <Link to={"/Family/Bonanno"} alcoolList={alcoolFamily1}>
         <div>
           <div>Photo 3</div>
           <text>fAMILY 3</text>

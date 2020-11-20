@@ -2,10 +2,8 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
-import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
-import IconButton from "@material-ui/core/IconButton";
-import { Row } from "rsuite";
+import PeakyLogo from "../components/assets/PeakyLogo.png";
 
 function NavBarTab() {
   const useStyles = makeStyles((theme) => ({
@@ -26,9 +24,16 @@ function NavBarTab() {
 
   return (
     <div>
-      <AppBar position="static">
+    
+      <AppBar position="static" color="primary">
         <Toolbar>
-          <div>logo</div>
+          <img
+            src={PeakyLogo}
+            alt="logo"
+            classeName={classes.Peakylogo}
+            style={{height: "60px", width: "70px"}}
+          />
+          <div style={{ flex:7 }}></div>
 
           <Button color="inherit">Who we are</Button>
           <Button color="inherit">Partnership</Button>
