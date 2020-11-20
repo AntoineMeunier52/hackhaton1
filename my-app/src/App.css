@@ -195,6 +195,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  color: #d;
 }
 
 .finishAchat-remerciement {
@@ -237,6 +238,7 @@ body {
 }
 
 .confirm-select-container {
+  color: #d4d4d4;
   display: flex;
   flex-direction: column;
   align-items: center;

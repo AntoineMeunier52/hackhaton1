@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import NavBarTab from "./NavBarTab";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import HeaderCarousel from "./Header";
 import styled from "styled-components";
 
 function MainPage() {
@@ -32,7 +33,7 @@ function MainPage() {
   return (
     <>
       <NavBarTab />
-      <Header>MainPage header</Header>
+      <HeaderCarousel />
       <Link to={"/Family/Yaniso"} alcoolList={alcoolFamily1}>
         <div>
           <div>Photo 1</div>

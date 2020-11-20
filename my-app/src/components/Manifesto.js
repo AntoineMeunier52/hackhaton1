@@ -66,7 +66,7 @@ function Manifesto() {
             color="white"
             style={{
               color: "white",
-              fontSize: "55px",
+              fontSize: "60px",
               position: "absolute",
               bottom: "35px",
               left: "45px",

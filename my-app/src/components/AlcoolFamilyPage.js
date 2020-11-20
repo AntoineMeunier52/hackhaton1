@@ -35,6 +35,7 @@ function AlcoolFamilyPage({
 
   useEffect(() => {
     console.log(name);
+    console.log(picture1);
     getPictureFamily();
   }, []);
 
