@@ -2,8 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import { FormControl } from "@material-ui/core";
 import { InputLabel, Input, FormHelperText } from "@material-ui/core";
-import NavBarTab from "./components/NavBarTab";
-import teamPic from "./components/assets/bigteam.jpg";
+import NavBarTab from "./NavBarTab";
+import teamPic from "./assets/bigteam.jpg";
 import { Link } from "react-router-dom";
 
 function Postulate() {

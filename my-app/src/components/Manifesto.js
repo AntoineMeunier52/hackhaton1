@@ -1,5 +1,5 @@
 import React from "react";
-import whyski_B from "./components/assets/whyski_bw.jpg";
+import whyski_B from "./assets/whyski_bw.jpg";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 

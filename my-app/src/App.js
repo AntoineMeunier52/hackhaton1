@@ -5,8 +5,8 @@ import axios from "axios";
 import ConfirmPage from "./components/ConfirmPage";
 import MainPage from "./components/MainPage";
 import AlcoolFamilyPage from "./components/AlcoolFamilyPage";
-import Postulate from "./Postulate";
-import Manifesto from "./Manifesto";
+import Postulate from "./components/Postulate";
+import Manifesto from "./components/Manifesto";
 import FinishAchat from "./components/FinishAchat";
 
 function App() {
