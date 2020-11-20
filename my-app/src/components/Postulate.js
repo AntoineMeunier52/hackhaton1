@@ -18,12 +18,14 @@ function Postulate() {
     font-size: 85px;
     font-weight: bold;
     margin: 70px;
+    color: black;
   `;
 
   const Subtitle = styled.h2`
-    font-size: 80px;
+    font-size: 70px;
     font-weight: bold;
     margin: 70px;
+    color: black;
   `;
 
   return (

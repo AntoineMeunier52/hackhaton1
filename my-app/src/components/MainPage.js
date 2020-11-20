@@ -49,14 +49,18 @@ function MainPage() {
         Select one family Brewery and pick your poison :{" "}
       </div>
       <div style={{ display: "flex", flexDirection: "column" }}>
-        <Link to={"/Family/Gambino"} alcoolList={alcoolFamily1}>
+        <Link
+          to={"/Family/Gambino"}
+          alcoolList={alcoolFamily1}
+          style={{ color: "rgba(0, 0, 0, 1)" }}
+        >
           <FamilySection
             name={"Gambino"}
             picture={
               "https://upload.wikimedia.org/wikipedia/commons/6/62/Carlo_Gambino.jpg"
             }
             message={
-              "Strong men are molded by what is around them, it's in our tradtion to make sure, they are surround by the best whiskey "
+              "Strong men are molded by what is around them, it's in our tradtion to make sure they are surround by the best whiskey "
             }
           />
         </Link>
@@ -68,7 +72,9 @@ function MainPage() {
               picture={
                 "https://media2.nekropole.info/2015/01/Joseph-Bonanno.jpg"
               }
-              message={"The true power of whiskey is to bring the best of men "}
+              message={
+                "The true power of our whiskey is to bring the best of men "
+              }
             />
           </div>
         </Link>

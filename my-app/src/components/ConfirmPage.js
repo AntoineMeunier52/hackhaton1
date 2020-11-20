@@ -10,6 +10,7 @@ function ConfirmPage({
 }) {
   const [check, setCheck] = useState(false);
   const [price, setPrice] = useState();
+  const [isHover, setIsHover] = useState(false);
 
   useEffect(() => {
     let pd = shoppingCart.reduce((acc, cur) => {
@@ -41,11 +42,13 @@ function ConfirmPage({
             </div>
             <div className="confirm-info-price">
               <div className="confirm-shipping-price">
-                <p className="confirm-shipping">shipping</p>
-                <p>a tobacco packet to the delivery man</p>
+                <p className="confirm-shipping">shipping fee :</p>
+                <p className="confirm-shipping">
+                  a tobacco packet (for the boy)
+                </p>
               </div>
               <div className="confirm-total-price">
-                <p>Total</p>
+                <p>Total :</p>
                 <p>$ {price}</p>
               </div>
             </div>
@@ -109,7 +112,7 @@ function ConfirmPage({
               </div>
             )}
             <div className="confirm-select-container">
-              <p className="confirm-select-title">Selivery mode:</p>
+              <p className="confirm-select-title">Delivery mode :</p>
               <select className="confirm-select">
                 <option className="confirm-select-option">In bread</option>
                 <option className="confirm-select-option">
@@ -118,8 +121,12 @@ function ConfirmPage({
                 <option className="confirm-select-option">In a oil lamp</option>
               </select>
             </div>
-            <Link to="/shopping/finish" className="confirm-button">
-              Confirm my adress
+            <Link
+              to="/shopping/finish"
+              className="confirm-button"
+              style={{ color: "rgba(255, 255, 255, 1)" }}
+            >
+              Confirm your adress
             </Link>
           </form>
         </div>

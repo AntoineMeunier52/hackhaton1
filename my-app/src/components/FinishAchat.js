@@ -29,15 +29,15 @@ function FinishAchat() {
     <>
       <img src={logo} className="confirm-logo" />
       <div className="finishAchat-container">
-        <p className="finishAchat-remerciement">thank you for your purchase</p>
-        <p className="finishAchat-password">your order arrives in: 1H</p>
-        <p className="finishAchat-password">le mot de passe: {pwd} </p>
+        <p className="finishAchat-remerciement">Thank you for your purchase</p>
+        <p className="finishAchat-password">your order arrives within 1 hour</p>
+        <p className="finishAchat-password">Password for the boy : {pwd} </p>
         <p className="finishAchat-message">
-          *when you the delivery man say the password in your location please
-          repet the password
+          *when you the delivery man ask "Peaky P ?" in your location please
+          repeat the password
         </p>
         <Link to="/" className="finishAchat-link">
-          return to the site{" "}
+          return to the site
         </Link>
       </div>
     </>
