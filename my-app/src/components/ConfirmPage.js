@@ -107,11 +107,19 @@ function ConfirmPage({
                 </div>
               </div>
             )}
-            <div>
-              <Link to="/shopping/finish" className="confirm-button">
-                confirm my adress
-              </Link>
+            <div className="confirm-select-container">
+              <p className="confirm-select-title">delivery mode:</p>
+              <select className="confirm-select">
+                <option className="confirm-select-option">in bread</option>
+                <option className="confirm-select-option">
+                  in a bottle of milk
+                </option>
+                <option className="confirm-select-option">in a oil lamp</option>
+              </select>
             </div>
+            <Link to="/shopping/finish" className="confirm-button">
+              confirm my adress
+            </Link>
           </form>
         </div>
       </div>
