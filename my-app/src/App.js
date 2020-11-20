@@ -7,6 +7,7 @@ import MainPage from "./components/MainPage";
 import AlcoolFamilyPage from "./components/AlcoolFamilyPage";
 import Postulate from "./Postulate";
 import Manifesto from "./Manifesto";
+import FinishAchat from "./components/FinishAchat";
 
 function App() {
   const [alcoolFamily1, setFamilyAlcool1] = useState([]);
@@ -76,6 +77,11 @@ function App() {
           render={(props) => (
             <ConfirmPage shoppingCart={shoppingCart} status={status} />
           )}
+        />
+        <Route
+          exact
+          path="/shopping/finish"
+          render={(props) => <FinishAchat />}
         />
       </Switch>
     </Router>
