@@ -6,16 +6,16 @@ function FinishAchat() {
   const [pwd, setPwd] = useState([]);
 
   const passwordType = [
-    "drinking so wildy",
+    "Drinking so wildy",
+    "Drinking so wildy",
     "Fake it, until you drink it",
-    "Caput draconis",
-    "Alea jacta est",
+    "Snitches are for the fishes",
     "Wild is coming",
   ];
 
   const randomPwd = () => {
     const min = 1;
-    const max = passwordType.length;
+    const max = passwordType.length - 1;
     const rand = Math.round(min + Math.random() * (max - min));
     setPwd(passwordType[rand]);
     return rand;
@@ -36,6 +36,7 @@ function FinishAchat() {
           *when you the delivery man ask "Peaky P ?" in your location please
           repeat the password
         </p>
+        <p className="finishAchat-message">*Tips for the boys are welcomed</p>
         <Link to="/" className="finishAchat-link">
           return to the site
         </Link>

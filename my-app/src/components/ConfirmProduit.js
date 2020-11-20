@@ -9,7 +9,7 @@ class ConfirmProduit extends React.Component {
     return (
       <div className="produit-container">
         <p className="produit-name">{this.props.name}</p>
-        <p className="produit-prix">{this.props.price}</p>
+        <p className="produit-prix">{this.props.price} $</p>
       </div>
     );
   }

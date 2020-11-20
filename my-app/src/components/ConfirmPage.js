@@ -49,7 +49,7 @@ function ConfirmPage({
               </div>
               <div className="confirm-total-price">
                 <p>Total :</p>
-                <p>$ {price}</p>
+                <p>{price} $</p>
               </div>
             </div>
           </div>
