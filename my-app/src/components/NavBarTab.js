@@ -64,7 +64,7 @@ function NavBarTab() {
                 color: "black",
               }}
             >
-              Postuler
+              Partnership
             </Button>
           </Link>
           <Link to="/shopping">

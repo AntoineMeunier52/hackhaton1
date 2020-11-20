@@ -64,7 +64,11 @@ function MainPage() {
             }
           />
         </Link>
-        <Link to={"/Family/Lucchese"} alcoolList={alcoolFamily1}>
+        <Link
+          to={"/Family/Lucchese"}
+          alcoolList={alcoolFamily1}
+          style={{ color: "rgba(0, 0, 0, 1)" }}
+        >
           <div>
             <FamilySection
               name={"Lucchese"}
@@ -78,7 +82,11 @@ function MainPage() {
             />
           </div>
         </Link>
-        <Link to={"/Family/Bonanno"} alcoolList={alcoolFamily1}>
+        <Link
+          to={"/Family/Bonanno"}
+          alcoolList={alcoolFamily1}
+          style={{ color: "rgba(0, 0, 0, 1)" }}
+        >
           <div>
             <FamilySection
               name={"Bonanno"}
