@@ -12,8 +12,6 @@ function AlcoolFamilyPage({
   handleShoppingAdd,
   handleShoppingRemove,
 }) {
-  console.log(alcoolList);
-
   const { name } = useParams();
   const [pictureFamily, setPictureFamily] = useState("");
 
@@ -34,7 +32,6 @@ function AlcoolFamilyPage({
   };
 
   useEffect(() => {
-    console.log(name);
     getPictureFamily();
   }, []);
 
@@ -60,11 +57,28 @@ function AlcoolFamilyPage({
     <FamilyPage>
       <NavBarTab />
       <Header>
-        {" "}
-        <Title>{name}'s Famiglia</Title>{" "}
+        <Title>{name}'s Famiglia</Title>
       </Header>
-      <Link to="/">
-        <div>Back</div>
+      <Link
+        to="/"
+        style={{
+          color: "white",
+          position: "absolute",
+          bottom: "0",
+          left: "0",
+        }}
+      >
+        <ion-icon
+          name="arrow-back"
+          color="white"
+          style={{
+            color: "black",
+            fontSize: "60px",
+            position: "absolute",
+            bottom: "35px",
+            left: "45px",
+          }}
+        ></ion-icon>
       </Link>
       <AlcoolList
         alcoolList={alcoolList}

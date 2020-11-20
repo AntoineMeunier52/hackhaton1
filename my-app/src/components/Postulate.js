@@ -2,19 +2,14 @@ import React from "react";
 import styled from "styled-components";
 import { FormControl } from "@material-ui/core";
 import { InputLabel, Input, FormHelperText } from "@material-ui/core";
-import NavBarTab from "./NavBarTab";
-import teamPic from "./assets/bigteam.jpg";
+import teamPic from "../components/assets/bigteam.jpg";
 import { Link } from "react-router-dom";
 
 function Postulate() {
   const Header = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     background-image: url(${teamPic});
     background-size: cover;
-    color: white;
-    height: 850px;
+    height: 100vh;
     width: 50%;
     background-position-x: 40%;
   `;
@@ -33,10 +28,8 @@ function Postulate() {
 
   return (
     <div>
-      <NavBarTab />
       <div style={{ display: "flex", flexDirection: "row" }}>
-        <Header />
-        <div>
+        <div style={{ width: "50%", textAlign: "center" }}>
           <Title>Join the team </Title>
           <Subtitle>Part of the force</Subtitle>
           <Subtitle>(217) 509-6995 </Subtitle>
@@ -44,14 +37,15 @@ function Postulate() {
             <ion-icon
               name="arrow-back"
               style={{
-                fontSize: "75px",
+                fontSize: "100px",
                 position: "absolute",
-                bottom: "35px",
-                right: "300px",
+                bottom: "130px",
+                left: "240px",
               }}
             ></ion-icon>
           </Link>
         </div>
+        <Header />
       </div>
     </div>
   );

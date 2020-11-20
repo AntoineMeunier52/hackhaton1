@@ -12,9 +12,7 @@ function AlcoolInfoCard({ alcool, handleShoppingAdd, handleShoppingRemove }) {
       axios
         .get("https://evening-citadel-85778.herokuapp.com/whiskey/")
         .then((res) => {
-          console.log(res);
           setGetPic((prevState) => [...prevState, res.url]);
-          console.log(getPic);
         })
         .catch((error) => {
           console.log(error);
@@ -35,8 +33,8 @@ function AlcoolInfoCard({ alcool, handleShoppingAdd, handleShoppingRemove }) {
     height: 350px;
     width: 250px;
     margin: 5px;
-    background-color: lightgreen;
-    border: 5px solid black;
+    background-color: #464646;
+    color: #d4d4d4;
   `;
   const AlcoolImg = styled.div`
     background-image: url(${alcool.list_img_url
@@ -47,32 +45,45 @@ function AlcoolInfoCard({ alcool, handleShoppingAdd, handleShoppingRemove }) {
     width: 100%;
   `;
   const AlcoolContent = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-self: center;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-content: space-between;
+  align-text: center
+  width: 250px;
   `;
 
   return (
     <AlcoolCard>
       <AlcoolImg />
       <AlcoolContent>
-        <p>{alcool.title}</p>
-        <p>Price : {alcool.price} $</p>
-        <button
-          onClick={() => {
-            handleShoppingAdd(alcool);
+        <p style={{ margin: "0 10px" }}>{alcool.title}</p>
+        <p style={{ margin: "0 10px" }}>Price : {alcool.price} $</p>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            width: "250px",
+            marginTop: "8px",
           }}
         >
-          Add
-        </button>
-        <button
-          onClick={() => {
-            handleShoppingRemove(alcool);
-          }}
-        >
-          Remove
-        </button>
+          <button
+            style={{ width: "50%", color: "#464646", padding: "1px 0 " }}
+            onClick={(e) => {
+              handleShoppingAdd(e, alcool);
+            }}
+          >
+            Add
+          </button>
+          <button
+            style={{ backgroundColor: "transparent", width: "50%" }}
+            onClick={(e) => {
+              handleShoppingRemove(e, alcool);
+            }}
+          >
+            Remove
+          </button>
+        </div>
       </AlcoolContent>
     </AlcoolCard>
   );

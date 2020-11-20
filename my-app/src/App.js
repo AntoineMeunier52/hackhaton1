@@ -33,12 +33,13 @@ function App() {
     getAlcool1();
   }, []);
 
-  const handleShoppingAdd = (alcool) => {
-    console.log("New product", alcool);
+  const handleShoppingAdd = (e, alcool) => {
+    console.log(e);
+    e.preventDefault();
     setShoppintCart((prevState) => [...prevState, alcool]);
   };
 
-  const handleShoppingRemove = (alcool) => {
+  const handleShoppingRemove = (e, alcool) => {
     console.log("Remove product", alcool);
     setShoppintCart((prevState) => {
       if (prevState.includes(alcool)) {

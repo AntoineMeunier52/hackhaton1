@@ -2,7 +2,10 @@ import { Link } from "react-router-dom";
 import NavBarTab from "./NavBarTab";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import HeaderCarousel from "./Header";
 import styled from "styled-components";
+import FamilySection from "./FamilySection";
+import picBonanno from "../components/assets/tommy.JPG";
 
 function MainPage() {
   const [alcoolFamily1, setFamilyAlcool1] = useState([]);
@@ -32,25 +35,55 @@ function MainPage() {
   return (
     <>
       <NavBarTab />
-      <Header>MainPage header</Header>
-      <Link to={"/Family/Gambino"} alcoolList={alcoolFamily1}>
-        <div>
-          <div>Photo 1</div>
-          <text>FAMILY 1</text>
-        </div>
-      </Link>
-      <Link to={"/Family/Lucchese"} alcoolList={alcoolFamily1}>
-        <div>
-          <div>Photo 2</div>
-          <text>FAMILY 2</text>
-        </div>
-      </Link>
-      <Link to={"/Family/Bonanno"} alcoolList={alcoolFamily1}>
-        <div>
-          <div>Photo 3</div>
-          <text>FAMILY 3</text>
-        </div>
-      </Link>
+      <HeaderCarousel />
+      <div
+        style={{
+          color: "black",
+          fontWeight: "bold",
+          fontSize: "50px",
+          margin: " 10px 0px",
+          padding: "0px 200px",
+          textDecoration: "underline",
+        }}
+      >
+        Select one family Brewery and pick your poison :{" "}
+      </div>
+      <div style={{ display: "flex", flexDirection: "column" }}>
+        <Link to={"/Family/Gambino"} alcoolList={alcoolFamily1}>
+          <FamilySection
+            name={"Gambino"}
+            picture={
+              "https://upload.wikimedia.org/wikipedia/commons/6/62/Carlo_Gambino.jpg"
+            }
+            message={
+              "Strong men are molded by what is around them, it's in our tradtion to make sure, they are surround by the best whiskey "
+            }
+          />
+        </Link>
+        <Link to={"/Family/Lucchese"} alcoolList={alcoolFamily1}>
+          <div>
+            <FamilySection
+              name={"Lucchese"}
+              alcoolList={alcoolFamily1}
+              picture={
+                "https://media2.nekropole.info/2015/01/Joseph-Bonanno.jpg"
+              }
+              message={"The true power of whiskey is to bring the best of men "}
+            />
+          </div>
+        </Link>
+        <Link to={"/Family/Bonanno"} alcoolList={alcoolFamily1}>
+          <div>
+            <FamilySection
+              name={"Bonanno"}
+              picture={picBonanno}
+              message={
+                "Long is the list of whiskeys, but Bonanno's make offer no one can resist"
+              }
+            />
+          </div>
+        </Link>
+      </div>
     </>
   );
 }
