@@ -8,6 +8,7 @@ function FinishAchat() {
       <img src={logo} className="confirm-logo" />
       <div className="finishAchat-container">
         <p className="finishAchat-remerciement">thank you for your purchase</p>
+        <p className="finishAchat-password">your order arrives in: 1H</p>
         <p className="finishAchat-password">
           le mot de passe: drinking so wildy
         </p>
