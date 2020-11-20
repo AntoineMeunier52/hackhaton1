@@ -3,9 +3,9 @@ import { Link, useParams } from "react-router-dom";
 import NavBarTab from "./NavBarTab";
 import AlcoolList from "./AlcoolList";
 import styled from "styled-components";
-import picture1 from "./assets/prohibition_family_1.jpg";
-import picture2 from "./assets/Prohibition_pic2.jpg";
-import picture3 from "./assets/picture-3.jpg";
+import picture1 from "../components/assets/prohibition_family_1.jpg";
+import picture2 from "../components/assets/pic_2_dark.png";
+import picture3 from "../components/assets/pic_3-dark.png";
 
 function AlcoolFamilyPage({
   alcoolList,
@@ -19,13 +19,13 @@ function AlcoolFamilyPage({
 
   const getPictureFamily = () => {
     switch (name) {
-      case "Yaniso":
+      case "Gambino":
         setPictureFamily(picture1);
         break;
-      case "Elvio":
+      case "Lucchese":
         setPictureFamily(picture2);
         break;
-      case "Alfonso":
+      case "Bonanno":
         setPictureFamily(picture3);
         break;
       default:

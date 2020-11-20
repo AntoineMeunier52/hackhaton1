@@ -5,6 +5,8 @@ import axios from "axios";
 import ConfirmPage from "./components/ConfirmPage";
 import MainPage from "./components/MainPage";
 import AlcoolFamilyPage from "./components/AlcoolFamilyPage";
+import Postulate from "./components/Postulate";
+import Manifesto from "./components/Manifesto";
 import FinishAchat from "./components/finishAchat";
 
 function App() {
@@ -63,6 +65,12 @@ function App() {
             />
           )}
         />
+        <Route exact path="/postulate">
+          <Postulate />
+        </Route>
+        <Route exact path="/manifesto">
+          <Manifesto />
+        </Route>
         <Route
           exact
           path="/shopping"
