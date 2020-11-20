@@ -32,19 +32,25 @@ function NavBarTab() {
     <div>
       <AppBar position="static" color="primary" style={{ height: "65px" }}>
         <Toolbar>
-          <img
-            src={logo}
-            alt="logo"
-            className={classes.logo}
-            style={{ height: "60px", width: "70px" }}
-          />
+          <Link to="/">
+            <img
+              src={logo}
+              alt="logo"
+              className={classes.logo}
+              style={{ height: "60px", width: "70px" }}
+            />
+          </Link>
           <div style={{ flex: 7 }}></div>
-          <Button color="inherit" style={{ flex: 1, margin: "0px 25px" }}>
-            Who we are
-          </Button>
-          <Button color="inherit" style={{ flex: 1, margin: "0px 25px" }}>
-            Partnership
-          </Button>
+          <Link to="/manifesto">
+            <Button color="inherit" style={{ flex: 1, margin: "0px 25px" }}>
+              Manifesto
+            </Button>
+          </Link>
+          <Link to="/postulate">
+            <Button color="inherit" style={{ flex: 1, margin: "0px 25px" }}>
+              Postuler
+            </Button>
+          </Link>
           <Button color="inherit" style={{ flex: 1, margin: "0px 25px" }}>
             Contact us
           </Button>

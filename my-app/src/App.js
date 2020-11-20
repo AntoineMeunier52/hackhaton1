@@ -5,6 +5,8 @@ import axios from "axios";
 import ConfirmPage from "./components/ConfirmPage";
 import MainPage from "./components/MainPage";
 import AlcoolFamilyPage from "./components/AlcoolFamilyPage";
+import Postulate from "./Postulate";
+import Manifesto from "./Manifesto";
 
 function App() {
   const [alcoolFamily1, setFamilyAlcool1] = useState([]);
@@ -62,6 +64,12 @@ function App() {
             />
           )}
         />
+        <Route exact path="/postulate">
+          <Postulate />
+        </Route>
+        <Route exact path="/manifesto">
+          <Manifesto />
+        </Route>
         <Route
           exact
           path="/shopping"

@@ -33,25 +33,24 @@ function MainPage() {
     <>
       <NavBarTab />
       <Header>MainPage header</Header>
-      <Link to={"/Family/Yaniso"} alcoolList={alcoolFamily1}>
+      <Link to={"/Family/Gambino"} alcoolList={alcoolFamily1}>
         <div>
           <div>Photo 1</div>
           <text>FAMILY 1</text>
         </div>
       </Link>
-      <Link to={"/Family/Elvio"} alcoolList={alcoolFamily1}>
+      <Link to={"/Family/Lucchese"} alcoolList={alcoolFamily1}>
         <div>
           <div>Photo 2</div>
           <text>FAMILY 2</text>
         </div>
       </Link>
-      <Link to={"/Family/Alfonso"} alcoolList={alcoolFamily1}>
+      <Link to={"/Family/Bonanno"} alcoolList={alcoolFamily1}>
         <div>
           <div>Photo 3</div>
           <text>FAMILY 3</text>
         </div>
       </Link>
-      <Link to={"/shopping"}> PANIER </Link>
     </>
   );
 }
